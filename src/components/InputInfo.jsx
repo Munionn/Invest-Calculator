@@ -8,24 +8,24 @@ export default function InputInfo({input,onChange}){
         <p>
           <label>Initial Investment</label>
           <input type="number" required value={input.initialInvestment}
-          onChange={(event)=>onChange("IntialInvest", event.target.value)}/>
+          onChange={(event)=>onChange("initialInvestment", event.target.value)}/>
         </p>
         <p>
         <label>Annual Investment</label>
         <input type="number" required value={input.annualInvestment}
-        onChange={(event)=>onChange("AnnuanInvst", event.target.value)}/>
+        onChange={(event)=>onChange("annualInvestment", event.target.value)}/>
         </p>
       </div>
       <div className="input-group">
         <p>
           <label>Expected Return</label>
           <input type="number" required value={input.expectedReturn}
-          onChange={(event)=>onChange("ExpectedRet", event.target.value)}/>
+          onChange={(event)=>onChange("expectedReturn", event.target.value)}/>
         </p>
         <p>
           <label>Duration</label>
-          <input type="number" required value={input.duration}
-          onChange={(event)=>onChange("Duration", event.target.value)}/>
+          <input type="number"  value={input.duration} min={1}
+          onChange={(event)=>onChange("duration", event.target.value)}/>
         </p>
       </div>
     </section>
